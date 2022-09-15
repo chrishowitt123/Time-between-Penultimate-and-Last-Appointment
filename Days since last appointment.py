@@ -4,6 +4,12 @@ import datetime as dt
 import numpy as np
 os.chdir(r'M:\MSG Open Episodes\Apointments pull 24.01.22')
 
+"""
+A program that returns the number of days between the penultimate and last appointment within an episode of care
+
+"""
+
+# import all appointments
 df = pd.read_csv('apptsFull.txt', '\t')
 
 # df = df.head(1000)
