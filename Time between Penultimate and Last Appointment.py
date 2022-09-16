@@ -5,7 +5,7 @@ import numpy as np
 os.chdir(r'M:\MSG Open Episodes\Apointments pull 24.01.22')
 
 """
-A program that returns the number of days between the penultimate and last appointment within an episode of care
+A program that returns the number of days between the penultimate and last appointment within an episode of care.
 
 """
 
@@ -40,7 +40,7 @@ for k,v in ep_groups:
 # results list to DataFrame    
 df_res =  pd.concat(results_list)
 
-# convery into standard units
+# convert into standard units of time
 df_res['DaysSincePrivousAppiontment'] = df_res['DaysSincePrivousAppiontment'].dt.total_seconds()
 df_res['DaysSincePrivousAppiontment'] = df_res['DaysSincePrivousAppiontment'] / 60 / 60 / 24
 
